@@ -1,0 +1,57 @@
+
+<!-- head robot -->
+
+<Robot name="r0">
+
+        <KinBody name="head" makejoinedlinksadjacent="1">
+
+	    <Body name="r00" type="dynamic">
+            <offsetfrom>r31</offsetfrom>
+            <Translation>0 0 0.435</Translation>
+            <Geom type="trimesh">
+            <Render>parts/0.0^head_links.wrl</Render>
+            <collision>parts/0.0^head_links.wrl</collision>
+            </Geom>
+            </Body>
+
+	    <Joint circular="true" name="q00" type="hinge">
+            <Body>r31</Body>
+            <Body>r00</Body>
+            <offsetfrom>r00</offsetfrom>
+            <weight>1.8385</weight>
+            <limitsdeg>-80 80</limitsdeg>
+            <axis>0 0 1</axis>
+            <maxvel>3</maxvel>
+            <resolution>1</resolution>
+            </Joint>
+
+
+	    <Body name="r01" type="dynamic">
+            <offsetfrom>r00</offsetfrom>
+            <Translation>0 0 0.0325</Translation>
+            <Geom type="trimesh">
+            <Render>parts/0.1^head_links.wrl</Render>
+            <collision>parts/0.1^head_links.wrl</collision>
+            </Geom>
+            </Body>
+
+	    <Joint circular="true" name="q01" type="hinge">
+            <Body>r00</Body>
+            <Body>r01</Body>
+            <offsetfrom>r01</offsetfrom>
+            <weight>1.8385</weight>
+            <limitsdeg>-80 80</limitsdeg>
+            <axis>0 1 0</axis>
+            <maxvel>3</maxvel>
+            <resolution>1</resolution>
+            </Joint>
+
+       </KinBody>
+
+       <Manipulator name="head">
+          <effector>r01</effector>
+          <base>r00</base>
+       </Manipulator>
+
+</Robot>
+

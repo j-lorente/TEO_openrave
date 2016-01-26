@@ -1,0 +1,21 @@
+<Robot name="TEO">
+
+<KinBody name="base">
+<Body name="hip" type="dynamic">
+<Geom type="trimesh">
+<Translation>0 0 0</Translation>
+<rotationaxis>0 0 1 0</rotationaxis>
+<Render>parts/hip_links.wrl</Render>
+<collision>parts/hip_links.wrl</collision>
+</Geom>
+</Body>
+</KinBody>
+
+<Robot name="torso" file="torso.xml" />
+<Robot name="head" file="head.xml" />
+<Robot name="right_arm" file="right_arm.xml" />
+<Robot name="left_arm" file="left_arm.xml" />
+<Robot name="right_leg" file="right_leg.xml" />
+<Robot name="left_leg" file="left_leg.xml" />
+
+</Robot>

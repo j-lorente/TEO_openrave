@@ -1,0 +1,43 @@
+# Documentation
+*.pdf
+*.jpg
+*.ods
+
+# Plugin
+Plugin/pidbuild
+Plugin/pidcontroller/CMakeLists.txt.user
+Plugin/pidcontroller/FindOpenRAVE.cmake
+Plugin/pidcontroller/Makefile
+
+# Source
+Source/build-recovery-Desktop-Default
+Source/recovery/CMakeLists.txt.user
+
+# Compiled Object files
+*.slo
+*.lo
+*.o
+*.obj
+
+# Precompiled Headers
+*.gch
+*.pch
+
+# Compiled Dynamic libraries
+*.so
+*.dylib
+*.dll
+
+# Fortran module files
+*.mod
+
+# Compiled Static libraries
+*.lai
+*.la
+*.a
+*.lib
+
+# Executables
+*.exe
+*.out
+*.app

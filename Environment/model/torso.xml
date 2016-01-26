@@ -1,0 +1,59 @@
+<!-- torso robot -->
+
+	<Robot name="r3">
+        <KinBody name="torso" makejoinedlinksadjacent="1">
+
+
+            <Body name="r30" type="dynamic">
+            <offsetfrom>hip</offsetfrom>
+            <Translation>0 0 0.1932</Translation>
+            <RotationAxis>0 0 1 0</RotationAxis>
+            <Geom type="trimesh">
+            <Render>parts/3.0^torso_links.wrl</Render>
+            <collision>parts/3.0^torso_links.wrl</collision>
+            </Geom>
+            </Body>
+
+	    <Joint circular="true" name="q30" type="hinge">
+            <Body>hip</Body>
+            <Body>r30</Body>
+            <offsetfrom>r30</offsetfrom>
+            <weight>23.974</weight>
+            <limitsdeg>-20 20</limitsdeg>
+            <axis>0 0 1</axis>
+            <maxvel>3</maxvel>
+            <resolution>1</resolution>
+            </Joint>
+
+	    <Body name="r31" type="dynamic">
+            <offsetfrom>r30</offsetfrom>
+            <Translation>0 0 0</Translation>
+            <Geom type="trimesh">
+            <Render>parts/3.1^torso_links.wrl</Render>
+            <collision>parts/3.1^torso_links.wrl</collision>
+            </Geom>
+            </Body>
+
+	    <Joint circular="true" name="q31" type="hinge">
+            <Body>r30</Body>
+            <Body>r31</Body>
+            <offsetfrom>r30</offsetfrom>
+            <weight>1.730</weight>
+            <limitsdeg>-80 80</limitsdeg>
+            <axis>0 1 0</axis>
+            <maxvel>3</maxvel>
+            <resolution>1</resolution>
+            </Joint>
+
+	  </KinBody>
+
+
+  <Manipulator name="torso">
+    <effector>r31</effector>
+    <base>r30</base>
+    <Translation>0 0 0</Translation>
+  </Manipulator>
+
+</Robot>
+
+

@@ -1,0 +1,29 @@
+<!-- teo_push.xml -->
+
+<Environment>
+
+    <physicsengine type="ode">
+        <odeproperties>
+            <friction>0.9</friction>
+            <erp>0.2</erp>
+            <cfm>0.00000001</cfm>
+            <gravity>0 0 -9.8</gravity>
+            <selfcollision>0</selfcollision>
+        </odeproperties>
+    </physicsengine>
+
+    <KinBody name="floor">
+	<Body name="floor" type="static">
+	   <Geom type="box">
+	       <Translation>0.0 0.0 0</Translation>
+	       <Extents>2 2 0.02</Extents>
+	       <diffuseColor>0.87 0.72 0.52</diffuseColor>
+	   </Geom>
+        </Body>
+    </KinBody>
+
+    <Robot name="TEO" file="../model/teo.xml">
+        <translation>0 0 0.87</translation>
+    </Robot>
+
+</Environment>
